@@ -5,7 +5,7 @@ const session = require("express-session");
 
 app.use(
   session({
-    secret: "123456", // Change this to a random string
+    secret: "123456",
     resave: false,
     saveUninitialized: true,
   })
