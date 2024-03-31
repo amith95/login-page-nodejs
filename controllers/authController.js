@@ -1,3 +1,4 @@
+const shirts = require('../productController');
 const USER = [
   {
     username: "amith",
@@ -40,7 +41,7 @@ exports.post_logout = async (req, res) => {
 
 exports.get_home = async (req, res) => {
   if (req.session.user) {
-    res.render("home");
+    res.render('home', { username: req.session.username, shirts: shirts });
   } else {
     res.redirect("/");
   }
