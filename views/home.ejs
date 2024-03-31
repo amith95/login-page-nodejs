@@ -32,6 +32,25 @@
         <p id="profilePhoneNumber"></p>
       </div>
     </div>
+    
+    <div class="shirts">
+      <% shirts.forEach((item) => { %>
+        <div class="shirt">
+          <img src="<%= item.Image %>" alt="<%= item.name %>">
+          <div class="shirt_body">
+            <h3><%= item.name %></h3>
+            <h2><%= item.price %></h2>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+    
+    
+        
+      });
+
+      
+    </div>
     <script>
       // Add event listener to the "Sign out" button
       document
@@ -57,7 +76,7 @@
             }
           } catch (error) {
             console.error("Error during logout:", error);
-            // Optionally, you can display an error message to the user
+            // Optionally, you can dis     play an error message to the user
           }
         });
     </script>
